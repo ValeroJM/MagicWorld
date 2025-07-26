@@ -1,7 +1,7 @@
 package MagicWorld_Pages;
 
 public class Mw_SearchPage {
-    static String imgPath = "C:\\Users\\eihc2\\Desktop\\SikuliX\\InboxDollars_Search\\src\\test\\java\\img\\";
+    static String imgPath = "C:\\Users\\eihc2\\Desktop\\SikuliX\\MagicWorld_Game\\src\\test\\java\\img\\";
     public static String Mw_MainButton = imgPath + "Mw_MainButton.png";
     public static String Mw_TournamentButton = imgPath + "Mw_TournamentButton.png";
     public static String Mw_SingleTournamentImg = imgPath + "Mw_SingleTournamentImg.png";
