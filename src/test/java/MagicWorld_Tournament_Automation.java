@@ -38,47 +38,60 @@ public class MagicWorld_Tournament_Automation {
             //With these lines we will navigate to the Main menu and click on it
             s.find(Mw_SearchPage.Mw_MainButton);
             s.click();
-            Thread.sleep(1500);
+            Thread.sleep(2500);
 
             //With these lines we will navigate to the Tournament Icon and click on it
             s.find(Mw_SearchPage.Mw_TournamentButton);
             s.click();
-            Thread.sleep(1500);
+            Thread.sleep(2500);
 
             if(tournamentType == 0){
                 //With these lines we will navigate to Single Tournament Icon and click on it
                 s.find(Mw_SearchPage.Mw_SingleTournamentImg);
                 s.click();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
 
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
+
+                automationTime = 55;
+                Thread.sleep((long) automationTime * 60 * 1000);
+
+                //With these lines we will navigate to Continue Button and click on it
+                s.find(Mw_SearchPage.Mw_continueBtn);
+                s.click();
+                Thread.sleep(2500);
+
+                //With these lines we will navigate to Arrow Back Button and click on it
+                s.find(Mw_SearchPage.Mw_arrowBackBtn);
+                s.click();
+                Thread.sleep(2500);
             } else {
                 //With these lines we will navigate to Grand Tournament Icon and click on it
                 s.find(Mw_SearchPage.Mw_GrandTournamentImg);
                 s.click();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
 
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
-                Thread.sleep(1500);
+                Thread.sleep(2500);
+
+                automationTime = 55;
+                Thread.sleep((long) automationTime * 60 * 1000);
+
+                //With these lines we will navigate to Continue Button and click on it
+                s.find(Mw_SearchPage.Mw_continueBtn);
+                s.click();
+                Thread.sleep(2500);
+
+                //With these lines we will navigate to Arrow Back Button and click on it
+                s.find(Mw_SearchPage.Mw_arrowBackBtn);
+                s.click();
+                Thread.sleep(2500);
             }
-
-            automationTime = 55;
-            Thread.sleep((long) automationTime * 60 * 1000);
-
-            //With these lines we will navigate to Continue Button and click on it
-            s.find(Mw_SearchPage.Mw_continueBtn);
-            s.click();
-            Thread.sleep(1500);
-
-            //With these lines we will navigate to Arrow Back Button and click on it
-            s.find(Mw_SearchPage.Mw_arrowBackBtn);
-            s.click();
-            Thread.sleep(1500);
 
         }catch (FindFailed e){
             e.printStackTrace();
