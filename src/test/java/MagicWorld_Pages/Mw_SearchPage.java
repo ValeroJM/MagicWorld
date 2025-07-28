@@ -9,4 +9,5 @@ public class Mw_SearchPage {
     public static String Mw_joinBtn = imgPath + "Mw_joinBtn.png";
     public static String Mw_continueBtn = imgPath + "Mw_continueBtn.png";
     public static String Mw_arrowBackBtn = imgPath + "Mw_arrowBackBtn.png";
+    public static String Mw_logo = imgPath + "Mw_logo.png";
 }

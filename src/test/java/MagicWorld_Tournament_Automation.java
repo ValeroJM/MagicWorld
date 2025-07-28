@@ -59,8 +59,18 @@ public class MagicWorld_Tournament_Automation {
                 automationTime = 55;
                 Thread.sleep((long) automationTime * 60 * 1000);
 
+                //With these lines we will navigate to Logo and click on it
+                s.find(Mw_SearchPage.Mw_logo);
+                s.click();
+                Thread.sleep(2500);
+
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
+                s.click();
+                Thread.sleep(2500);
+
+                //With these lines we will navigate to Arrow Back Button and click on it
+                s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
                 Thread.sleep(2500);
 
@@ -82,8 +92,18 @@ public class MagicWorld_Tournament_Automation {
                 automationTime = 55;
                 Thread.sleep((long) automationTime * 60 * 1000);
 
+                //With these lines we will navigate to Logo and click on it
+                s.find(Mw_SearchPage.Mw_logo);
+                s.click();
+                Thread.sleep(2500);
+
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
+                s.click();
+                Thread.sleep(2500);
+
+                //With these lines we will navigate to Arrow Back Button and click on it
+                s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
                 Thread.sleep(2500);
 
