@@ -2,14 +2,18 @@
 import MagicWorld_Pages.Mw_SearchPage;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
 public class MagicWorld_Tournament_Automation {
+    private static final Logger log = LoggerFactory.getLogger(MagicWorld_Tournament_Automation.class);
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("¿Cada cuanto tiempo, en minutos, quieres que se repita el proceso?");
+        System.out.println("¿Cuando deseas iniciar el proceso la primera vez, en minutos?");
         int automationTime = input.nextInt();
         System.out.println("Indique con 0 si el primer torneo es \"Single Tournament\" o 1 sin es \"Grand Tourment\"");
         int tournamentType = input.nextInt();
@@ -19,7 +23,7 @@ public class MagicWorld_Tournament_Automation {
         while (true){
             sikuliAutomation(automationTime, tournamentType, count);
             count++;
-            System.out.println("count = " + count);
+            log.info("count = " + count);
             tournamentType = (tournamentType == 0) ? 1 : 0;
             automationTime = 56;
         }
@@ -38,22 +42,32 @@ public class MagicWorld_Tournament_Automation {
             //With these lines we will navigate to the Main menu and click on it
             s.find(Mw_SearchPage.Mw_MainButton);
             s.click();
+            log.info("Successfully >> Clicked on Mw_MainButton");
             Thread.sleep(2500);
 
             //With these lines we will navigate to the Tournament Icon and click on it
             s.find(Mw_SearchPage.Mw_TournamentButton);
             s.click();
+            log.info("Successfully >> Clicked on Mw_TournamentButton");
             Thread.sleep(2500);
 
             if(tournamentType == 0){
+                //With these lines we will navigate to Logo and click on it
+                s.find(Mw_SearchPage.Mw_logo);
+                s.click();
+                log.info("Successfully >> Clicked on Mw_logo");
+                Thread.sleep(2500);
+
                 //With these lines we will navigate to Single Tournament Icon and click on it
                 s.find(Mw_SearchPage.Mw_SingleTournamentImg);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_SingleTournamentImg");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_joinBtn");
                 Thread.sleep(2500);
 
                 automationTime = 55;
@@ -62,31 +76,43 @@ public class MagicWorld_Tournament_Automation {
                 //With these lines we will navigate to Logo and click on it
                 s.find(Mw_SearchPage.Mw_logo);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_logo");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_continueBtn");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Arrow Back Button and click on it
                 s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_arrowBackBtn first time");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Arrow Back Button and click on it
                 s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_arrowBackBtn Second time");
                 Thread.sleep(2500);
             } else {
+                //With these lines we will navigate to Logo and click on it
+                s.find(Mw_SearchPage.Mw_logo);
+                s.click();
+                log.info("Successfully >> Clicked on Mw_logo");
+                Thread.sleep(2500);
+
                 //With these lines we will navigate to Grand Tournament Icon and click on it
                 s.find(Mw_SearchPage.Mw_GrandTournamentImg);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_GrandTournamentImg");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_joinBtn");
                 Thread.sleep(2500);
 
                 automationTime = 55;
@@ -95,26 +121,31 @@ public class MagicWorld_Tournament_Automation {
                 //With these lines we will navigate to Logo and click on it
                 s.find(Mw_SearchPage.Mw_logo);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_logo");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_continueBtn");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Arrow Back Button and click on it
                 s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_arrowBackBtn first time");
                 Thread.sleep(2500);
 
                 //With these lines we will navigate to Arrow Back Button and click on it
                 s.find(Mw_SearchPage.Mw_arrowBackBtn);
                 s.click();
+                log.info("Successfully >> Clicked on Mw_arrowBackBtn Second time");
                 Thread.sleep(2500);
             }
 
         }catch (FindFailed e){
             e.printStackTrace();
+            System.exit(0);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
