@@ -2,8 +2,6 @@
 import MagicWorld_Pages.Mw_SearchPage;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
@@ -23,7 +21,7 @@ public class MagicWorld_Tournament_Automation {
             count++;
             System.out.println("count = " + count);
             tournamentType = (tournamentType == 0) ? 1 : 0;
-            automationTime = 56;
+            automationTime = 60;
         }
     }
 
@@ -58,8 +56,7 @@ public class MagicWorld_Tournament_Automation {
                 s.click();
                 Thread.sleep(2500);
 
-                automationTime = 55;
-                Thread.sleep((long) automationTime * 60 * 1000);
+                Thread.sleep((long) 60 * 60 * 1000);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
@@ -82,8 +79,7 @@ public class MagicWorld_Tournament_Automation {
                 s.click();
                 Thread.sleep(2500);
 
-                automationTime = 55;
-                Thread.sleep((long) automationTime * 60 * 1000);
+                Thread.sleep((long) 60 * 60 * 1000);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
