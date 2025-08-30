@@ -11,7 +11,7 @@ public class MagicWorld_Tournament_Automation {
 
         System.out.println("¿Cuando deseas iniciar el proceso la primera vez, en minutos?");
         int automationTime = input.nextInt();
-        System.out.println("Indique con 0 si el primer torneo es \"Single Tournament\" o 1 sin es \"Grand Tourment\"");
+        System.out.println("Indique con 0 si el primer torneo es \"Single Tournament\" o 1 sin es \"Grand Tournament\"");
         int tournamentType = input.nextInt();
 
         int count = 0;
