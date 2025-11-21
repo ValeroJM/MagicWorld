@@ -3,6 +3,7 @@ import MagicWorld_Pages.Mw_SearchPage;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class MagicWorld_Tournament_Automation {
@@ -93,7 +94,9 @@ public class MagicWorld_Tournament_Automation {
             }
 
         }catch (FindFailed e){
+            LocalDateTime ahora = LocalDateTime.now();
             e.printStackTrace();
+            System.out.println("Fecha y hora del ERROR: " + ahora);
             System.exit(0);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
