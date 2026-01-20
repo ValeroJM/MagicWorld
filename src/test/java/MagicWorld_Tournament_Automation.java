@@ -55,9 +55,8 @@ public class MagicWorld_Tournament_Automation {
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
-                Thread.sleep(2500);
 
-                Thread.sleep(3590000);
+                Thread.sleep(3592500);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
@@ -78,9 +77,8 @@ public class MagicWorld_Tournament_Automation {
                 //With these lines we will navigate to Join button and click on it
                 s.find(Mw_SearchPage.Mw_joinBtn);
                 s.click();
-                Thread.sleep(2500);
 
-                Thread.sleep(3590000);
+                Thread.sleep(3592500);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
