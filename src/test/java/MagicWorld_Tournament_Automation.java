@@ -57,7 +57,7 @@ public class MagicWorld_Tournament_Automation {
                 s.click();
                 Thread.sleep(2500);
 
-                Thread.sleep((long) 60 * 60 * 1000);
+                Thread.sleep(3590000);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
@@ -80,7 +80,7 @@ public class MagicWorld_Tournament_Automation {
                 s.click();
                 Thread.sleep(2500);
 
-                Thread.sleep((long) 60 * 60 * 1000);
+                Thread.sleep(3590000);
 
                 //With these lines we will navigate to Continue Button and click on it
                 s.find(Mw_SearchPage.Mw_continueBtn);
