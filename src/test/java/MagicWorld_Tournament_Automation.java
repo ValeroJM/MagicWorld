@@ -20,7 +20,7 @@ public class MagicWorld_Tournament_Automation {
         while (true){
             sikuliAutomation(automationTime, tournamentType, count);
             count++;
-            System.out.println("count = " + count);
+            System.out.println("count = " + count + " - time: " + LocalDateTime.now());
             tournamentType = (tournamentType == 0) ? 1 : 0;
             automationTime = 60;
         }
